@@ -19,7 +19,6 @@ function renderButtons() {
 //function to display 10 gifs from giphy
 function displayTopicGifs() {
 	var topic = $(this).attr("data-name");
-	console.log("data-name");
 //api request to giphy with search term q= and limit=10
 	var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + topic +
 					"&api_key=dc6zaTOxFJmzC&limit=10";
