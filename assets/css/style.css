@@ -1,15 +1,5 @@
-/*	Things to add: Nicer buttons, Columns for Images and 
-	Search, button change color when clicked, background */
+/*	button change color when clicked */
 
-#container {
-	width: 100%;
-	height: 100%;
-	
-}
-
-#topicButtons {
-	width: 100%;
-}
 
 .topicGif {
 	float: left;
@@ -21,10 +11,8 @@
 	width: 75%;
 }
 
-topic {
-	float: right;
-}
 
+/* Margin for buttons on top */
 .topic {
 	margin: 5px;
 }
