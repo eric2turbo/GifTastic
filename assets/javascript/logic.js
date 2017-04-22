@@ -1,3 +1,5 @@
+
+//Topics for buttons on top of page
 var topics = ["dog", "cat", "lemur", "monkey", "manatee", "goldfish", "bird", "ferret",
 			  "turtle", "teacup pig"];
 
@@ -7,7 +9,7 @@ function renderButtons() {
 	
 	for (var i=0; i<topics.length; i++) {
 		var a = $("<button>");
-		a.addClass("topic");
+		a.addClass("topic btn btn-success btn-sm");
 		a.attr("data-name", topics[i]);
 		a.text(topics[i]);
 		$("#topicButtons").append(a);
@@ -35,9 +37,9 @@ function displayTopicGifs() {
 			p.text("Rating: " + results[i].rating);
 //adding img element with attributes for default and animated locations
 			var topicImage = $("<img>");
-			topicImage.attr("src", results[i].images.original_still.url);
-			topicImage.attr("data-still", results[i].images.original_still.url);
-			topicImage.attr("data-animate", results[i].images.original.url);
+			topicImage.attr("src", results[i].images.fixed_height_still.url);
+			topicImage.attr("data-still", results[i].images.fixed_height_still.url);
+			topicImage.attr("data-animate", results[i].images.fixed_height.url);
 			topicImage.attr("data-state", "still");
 			topicImage.addClass("gif");
 			topicDiv.append(topicImage);
@@ -55,11 +57,7 @@ $("#addtopic").on("click", function(event) {
 	renderButtons();
 });
 
-$(document).on("click", ".topic", displayTopicGifs);
-
-$(document).on("click", ".gif", animateGif);
-$(".gif").on("click", animateGif);
-	
+//Changes state of img element to animate or still
 function animateGif() {
 	var state = $(this).attr("data-state");
 	if (state === "still") {
@@ -70,5 +68,12 @@ function animateGif() {
 		$(this).attr("data-state", "still");
 	}			
 }
+
+$(document).on("click", ".topic", displayTopicGifs);
+
+//Event listener for animateGif for all gif class elements created by document
+$(document).on("click", ".gif", animateGif);
+//$(".gif").on("click", animateGif);
+	
 
 renderButtons();
