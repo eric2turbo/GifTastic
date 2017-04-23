@@ -1,7 +1,7 @@
 
 //Topics for buttons on top of page
-var topics = ["dog", "cat", "lemur", "monkey", "manatee", "goldfish", "bird", "ferret",
-			  "turtle", "teacup pig"];
+var topics = ["alison brie", "cat", "lemur", "monkey", "manatee", "poochie", "he-man",
+			  "simpsons", "turtle", "shia", "nope", "guile", "psy", "kanye"];
 
 //function to add buttons based on topics array
 function renderButtons() {
@@ -49,6 +49,8 @@ function displayTopicGifs() {
 	});	
 }
 
+
+//event listener for submit button
 $("#addtopic").on("click", function(event) {
 	event.preventDefault();
 	var topic = $("#topic-input").val().trim();

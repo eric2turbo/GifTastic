@@ -1,18 +1,21 @@
-/*	button change color when clicked */
-
 
 .topicGif {
 	float: left;
 	margin: .8em;
 }
 
-#gifs-appear-here {
-	float: left;
-	width: 75%;
+.container {
+	height: 100%;
+	width: 100%;
 }
-
 
 /* Margin for buttons on top */
 .topic {
 	margin: 5px;
 }
+
+/* topic buttons turn red on click */
+button.topic:focus {
+	background: red;
+}
+
