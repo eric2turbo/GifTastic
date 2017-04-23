@@ -1,7 +1,8 @@
 
 //Topics for buttons on top of page
-var topics = ["alison brie", "cat", "lemur", "monkey", "manatee", "poochie", "he-man",
-			  "simpsons", "turtle", "shia", "nope", "guile", "psy", "kanye"];
+var topics = ["alison brie", "lemur", "cruise", "manatee", "poochie", "heman",
+			  "simpsons", "turtle", "shia", "nope", "guile", "psy", "kanye", 
+			  "antonio banderas", "both"];
 
 //function to add buttons based on topics array
 function renderButtons() {
